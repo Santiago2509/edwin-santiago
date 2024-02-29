@@ -3,7 +3,11 @@ class cuentacorriente:
     # atributos 
     saldo = 0
     InteresMensual = 0
-    
+        
+        
+    def ConsultarSaldo(self):
+        return self.saldo
+
     def ConsignarValor(self):
         nsaldo = self.saldo + 1000
         self.saldo = nsaldo

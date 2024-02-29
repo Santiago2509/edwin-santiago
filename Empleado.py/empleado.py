@@ -3,12 +3,14 @@ from fecha import fecha
 class empleado:
     # aqui va el codigo del empleado
     
-    # ATRIBUTOS
+     #ATRIBUTOS
     nombre = ""
     apellido = ""
-    genero = ""
-    # 1= masculino y 2= femenino
     salario = 0
+    sexo = ""
+    # 1= masculino y 2= femenino
+   
+
     """-----------------------------------
     # ASOCIACIONES
     ------------------------------------"""
@@ -20,17 +22,23 @@ class empleado:
     # METODOS
     ---------------------------------------'''
     
+    def __init__(self, nombre, apellido, sexo, salario):
+        self.nombre = nombre
+        self.apellido =apellido
+        self.sexo = sexo
+        self.salario = salario
+
     def CambiarSalario(self, nuevoSalario):
         # aqui va el codigo del metodo
          return 0
 
-    def cambiarEmpleado(self, nuevoEmpleado):
+    def CambiarEmpleado(self, nuevoEmpleado):
         # aqui va el codigo del nuevo empleado
          return None
      
     def ConsultarSalario(self):
         # aqui va el codigo del metodo
-         return self.saldo
+         return self.salario
      
     def ConsultarNombre(self):
         # aqui va el codigo del metodo
@@ -49,7 +57,7 @@ class empleado:
         nsalario = nsalario + self.salario
         self.salario = nsalario
         
-    def CambiarNombre(selef, nnombre):
+    def CambiarNombre(self, nnombre):
         self.nombre = nnombre
         return "el nuevo nombre es"+self.nombre
     

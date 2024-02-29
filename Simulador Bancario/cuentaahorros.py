@@ -4,6 +4,10 @@ class cuentaahorros:
     saldo= 0
     interesmensual= 0
     """ # metodos"""
+       
+    def ConsultarSaldo(self):
+        return self.saldo
+   
     def consignarvalor(self):
         nsaldo= self.saldo + 1000
         self.saldo= nsaldo
@@ -14,7 +18,7 @@ class cuentaahorros:
         self.saldo = nsaldo
         return "el nuevo saldo menos el valor retirado es" + self.saldo
     
-    def interesmensual(slef):
+    def interesmensual(self):
         nsaldo= self.saldo * 0.6
         nsaldo = self.saldo + nsaldo
         self.saldo = nsaldo

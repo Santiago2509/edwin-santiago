@@ -18,13 +18,24 @@ class simuladorbancario:
     """--------------------------
     METODOS"
     -----------------------------"""
-    def ConsignarCuentaCorriente(self):
-        #aqui va el codigo de la copnsignacion de la cuenta
-        return self.ConsignarCuentaCorriente
-    
+    def ConsignarCuentaCorriente(self, valor):
+        self.corriente.ConsignarValor(valor)
+
     def CalcularSaldoTotal(self):
-        #aqui va el codigo
-        return "CalcularSaldoTotal:" +(self.cuentaahorros.saldo + cuentacorriente.saldo + self.cdt.saldo)
+        return self.corriente.ConsultarSaldo()+self.ahorros.ConsultarSaldo()
     
+    def PasarAhorrosACorriente(self):
+         self.corriente.ConsignarValor(self.ahorros.ConsultarSaldo())
+         self.ahorros.RetirarValor(self.ahorros.ConsultarSaldo())
+
+    def ConsultarSaldoCorriente(self):
+        return "tu saldo es:"+self.cuentacorriente.ConsultarSaldo()
     
-    
+    def DuplicarAhorro(self):
+        self.ahorros.ConsignarMonto(self.ahorros.ConsultarSaldo())
+
+    def RetirarTodo(self):
+        total = self.CalcularSaldoTotal()
+        self.cuentacorriente.RetirarValor(self.cuentacorriente.ConsultarSaldo())
+        self.cuentaahorros.retirarvalor(self.cuentaahorros.ConsultarSaldo())
+        return "retiraste total:"+total 
