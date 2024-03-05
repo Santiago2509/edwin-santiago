@@ -102,3 +102,4 @@ class empleado:
     def CalcularDiferenciaSalaria(self):
         #calcular diferencia salaria respecto a otro empleado
         deferencia=(self.salarioempleado1-self.salarioempleado2)
+    
