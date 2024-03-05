@@ -1,4 +1,5 @@
 from fecha import fecha
+from empleado2 import salario
 
 class empleado:
     # aqui va el codigo del empleado
@@ -9,6 +10,7 @@ class empleado:
     salario = 0
     sexo = ""
     # 1= masculino y 2= femenino
+    NumeroDeHijos=""
    
 
     """-----------------------------------
@@ -84,5 +86,19 @@ class empleado:
         total = self.CalcularSalarioAnual()
         return (total * 19.5) / 100
     
+    def ConsultarNumeroDeHijos(self):
+        #aqui va el nunmero de hijos que tiene
+        return self.NumeroDeHijos
     
+    def CalcularAuxilioEducativo(self, calcularauxilio):
+        #aqui va el auxilio educativo que tiene el empleado
+        auxilio=self.salario()*self.NumeroDeHijos()
+        return self.salario()*0.005
     
+    def CalcularAuxilioEducativo(self, calcularauxilio):
+        #calcula el auxilio educativo que tiene el empleado
+        auxilio=self.salario()*0
+        
+    def CalcularDiferenciaSalaria(self):
+        #calcular diferencia salaria respecto a otro empleado
+        deferencia=(self.salarioempleado1-self.salarioempleado2)
